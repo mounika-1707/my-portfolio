@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #fffaf9;
+      --primary-color: #e17c87;
+      --secondary-color: #f5dada;
+      --text-dark: #333;
+      --text-light: #777;
+    }
+    [data-theme="dark"] {
+      --bg-color: #1e1e1e;
+      --primary-color: #f06292;
+      --secondary-color: #2c2c2c;
+      --text-dark: #f5f5f5;
+      --text-light: #aaa;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-dark);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .navbar {
+      background-color: var(--secondary-color);
+    }
+
+    .navbar-nav .nav-link {
+      color: var(--text-dark);
+      font-weight: 600;
+      margin-right: 15px;
+    }
+
+    .navbar-nav .nav-link i {
+      margin-right: 5px;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: var(--primary-color);
+    }
+
+    .section {
+      padding: 60px 20px;
+      scroll-margin-top: 80px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      border-left: 5px solid var(--primary-color);
+      padding-left: 10px;
+    }
+
+    .about-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .about-img {
+      flex: 1;
+      text-align: center;
+    }
+
+    .about-img img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .about-img img:hover {
+      transform: scale(1.05);
+    }
+
+    .project {
+      background: var(--secondary-color);
+      padding: 1.5rem;
+      border-left: 5px solid var(--primary-color);
+      margin: 1rem 0;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .btn-custom {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+    }
+
+    .btn-custom:hover {
+      background: #c85c70;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--secondary-color);
+      color: var(--text-light);
+    }
+
+    .toggle-btn {
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-size: 1.5rem;
+      color: var(--text-dark);
+    }
+  </style>
+</head>
+<body data-theme="light">
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">MyPortfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-user"></i>About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects"><i class="fas fa-code"></i>Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume"><i class="fas fa-file-alt"></i>Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+        </ul>
+        <button class="toggle-btn" onclick="toggleTheme()" title="Toggle Light/Dark Mode"><i class="fas fa-adjust"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section" id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-section">
+      <div class="about-text">
+        <p>Hello! I'm a second-year Information-Technology student at Andhra University, Passionate about web development. I specialize in crafting dynamic,user-friendly, responsive and performant websites with a strong focus on both front-end design and backend functionality. With a deep ehthusiasm for coding, continuos learning, and creative problem-solving, i enjoy building digital experiences that are both visually engaging and technically robust. I'm currently sharpening my skills in modern web technologies and eager to contribute to impactful projects and collaborations.This portfolio reflects my creativity and commitment to elegant interfaces.</p>
+      </div>
+      <div class="about-img">
+        <img src="pot.jpg" alt="Your Photo">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="project">
+      <h4>🌱 EcoHero Game</h4>
+      <p>A fun sustainability game that promotes local eco challenges. Built using React and Firebase.</p>
+    </div>
+    <div class="project">
+      <h4>🧠 Quizify</h4>
+      <p>A smart quiz app built with HTML, CSS, and JavaScript that tracks scores and gives instant feedback.</p>
+    </div>
+    <div class="project">
+      <h4>CollegeTips.in Photo Gallery</h4>
+      <p> a dynamic web-based photo gallery designed to showcase vibrant campus life and student activities. It emphasizes responsive design, smooth animations, and user-friendly navigation, offering an engaging visual experience while reflecting the creative and energetic spirit of CollegeTips.in.</p>
+    </div>
+  </section>
+
+  <section class="section" id="resume">
+    <h2 class="section-title">Resume</h2>
+    <a href="My resume.pdf" class="btn btn-custom" download><i class="fas fa-download"></i> Download Resume</a>
+  </section>
+
+  <section class="section" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <p>Email: <a href="mailto:mounikakuppili94@gmail.com">mounikakuppili94@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/mounika-1707" target="_blank">github.com/mounika-1707</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/kuppili-mounika-654113333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">linkedin.com/in/kuppili-mounika</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 MOUNIKA.KUPPILI , All rights reserved.
+  </footer>
+
+  <!-- 404 Page Styling -->
+  <div id="page-not-found" style="display:none;text-align:center;padding:100px;">
+    <h1 style="font-size:4rem;">😵 404</h1>
+    <p style="font-size:1.5rem;">Oops! The page you’re looking for doesn’t exist.</p>
+    <a href="#" class="btn btn-custom mt-3">Go Back Home</a>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const current = body.getAttribute("data-theme");
+      body.setAttribute("data-theme", current === "light" ? "dark" : "light");
+    }
+
+    // Smooth scroll on nav click
+    document.querySelectorAll(".nav-link").forEach(link => {
+      link.addEventListener("click", () => {
+        setTimeout(() => {
+          const element = document.querySelector(link.getAttribute("href"));
+          if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      });
+    });
+
+    // Fallback 404 simulation (for demonstration only)
+    if (!window.location.hash || !document.querySelector(window.location.hash)) {
+      // Uncomment to enable fake 404 preview
+      // document.body.innerHTML = document.getElementById("page-not-found").outerHTML;
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
